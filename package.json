@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-remark-text-highlighter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dillion Megida <dillionmegida@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mdast-util-to-string": "^1.1.0",
+    "unist-util-visit": "^2.0.3"
+  }
+}
