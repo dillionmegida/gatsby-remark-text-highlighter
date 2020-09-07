@@ -8,8 +8,8 @@ module.exports = ({ markdownAST }, options) => {
     let para = toString(node)
     
     // syntax for highlighting:
-    // -# Hightlight me! #-
-    const syntax = /-#.*#-/
+    // -# Hightlight me! #- and -# me #-
+    const syntax = /-#((?!#-).)*#-/ig
     const matches = para.match(syntax)
     
     if (matches !== null) {
@@ -19,9 +19,10 @@ module.exports = ({ markdownAST }, options) => {
       if (useDefaultStyles) {
         style = `
           display:inline-block;
-          padding:20px;
+          padding:5px;
           background-color:yellow;
           color:black;
+          border-radius: 5px;
         `
       }
       
